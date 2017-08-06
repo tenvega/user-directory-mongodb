@@ -1,7 +1,7 @@
 const express = require('express');
 const db = require('./db');
 const exphbs = require('express-handlebars');
-const robotRoutes = require('./routers/robots');
+const rutas = require('./routers/robots');
 const app = express();
 
 // connection URL
@@ -17,7 +17,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 // add the routes
-app.use('/', robotRoutes);
+app.use('/', rutas);
 
 //start app
 db.connect(url, (err, conection) => {
