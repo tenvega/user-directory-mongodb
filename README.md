@@ -1,1 +1,1 @@
-Find collection called "robots" in newdbexport.json.
+$ mongoimport --db robots --collection robots --file newdbexport.json
